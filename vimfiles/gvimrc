@@ -1,0 +1,15 @@
+set background=light
+set columns=120 lines=35
+set guifont=Consolas:h11
+set guioptions+=a
+set mouse=a
+set mousehide
+colorscheme antiphoton
+map <ScrollWheelUp>   <C-Y>
+map <ScrollWheelDown> <C-E>
+nnoremap <A-PageUp> :tabprevious<CR>
+nnoremap <A-PageDown> :tabnext<CR>
+highlight clear foldcolumn
+highlight clear signcolumn
+highlight clear Tablinefill
+" vim:ft=vim:tw=0:sw=2:ts=2:sts=2:nowrap
