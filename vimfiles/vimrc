@@ -1,6 +1,25 @@
-execute pathogen#infect()
-syntax on
+"-------------------------------------------
+set nocompatible
+filetype off
+
+if has('win32')
+  set rtp+=~/.vim
+endif
+
+call plug#begin("~/.config/vim/plugged")
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rsi'
+Plug 'kshenoy/vim-signature'
+Plug 'tpope/vim-surround'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+call plug#end()
+
 filetype plugin indent on
+syntax on
+
 packadd! matchit
 
 let mapleader=" "
@@ -8,7 +27,6 @@ let mapleader=" "
 set autoindent
 set autoread
 set background=dark
-colorscheme onehalfdark
 set backspace=indent,eol,start
 set belloff=all
 set clipboard=unnamedplus,unnamed
@@ -27,10 +45,11 @@ set infercase
 set laststatus=2
 set list
 set listchars=tab:»·,trail:·
+set mouse=
 set nobackup
 set nocompatible
 set nolangremap
-set noundofile
+set undofile
 set nrformats-=octal
 set number
 set pastetoggle=<F12>
@@ -76,6 +95,7 @@ vnoremap >                >gv
 inoremap <silent> ;;d     ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
 inoremap <silent> ;;l     -------------------------------------------<CR>
 
+colorscheme onehalfdark
 highlight clear foldcolumn
 highlight clear signcolumn
 highlight clear Tablinefill
