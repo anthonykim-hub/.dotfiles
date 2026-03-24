@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 
 if has('win32')
-  set rtp+=~/.vim
+  set rtp+=$USERPROFILE/.config/vim
 endif
 
 call plug#begin("~/.config/vim/plugged")
@@ -29,6 +29,8 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
+set backup
+set backupdir=~/.config/vim/
 set belloff=all
 set clipboard=unnamedplus,unnamed
 set cmdheight=2
@@ -50,7 +52,6 @@ set mouse=
 set nobackup
 set nocompatible
 set nolangremap
-set undofile
 set nrformats-=octal
 set number
 set pastetoggle=<F12>
@@ -73,8 +74,11 @@ set termguicolors
 set textwidth=80
 set ttimeout
 set ttimeoutlen=100
+set undofile
+set undodir=~/.config/vim/
 set viewoptions-=options
-set viminfo^=!
+set viminfo=!,'1000,n~/.config/vim/
+set viminfofile=~/.config/vim/.viminfo
 set wildmenu
 
 " from 'tpope/vim-sensible'
