@@ -107,6 +107,21 @@ vnoremap >                >gv
 inoremap <silent> ;;d     ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
 inoremap <silent> ;;l     -------------------------------------------<CR>
 
+" plugin related maps
+
+if exists('$SSH_TTY')
+  vnoremap <leader>y      :OSCYankVisual<CR>
+  nnoremap <leader>Y      v$:OSCYankVisual<CR>
+  nnoremap <leader>yy     V:OSCYankVisual<CR>
+else
+  vnoremap <leader>y      "+y
+  nnoremap <leader>Y      "+y
+  nnoremap <leader>yy     "+Y
+endif
+
+vnoremap <Enter>          <Plug>(EasyAlign)
+noremap ga                <Plug>(EasyAlign)
+
 colorscheme onehalfdark
 highlight clear foldcolumn
 highlight clear signcolumn
