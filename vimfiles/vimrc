@@ -24,6 +24,7 @@ Plug 'tpope/vim-surround'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'axvr/photon.vim'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 call plug#end()
 
 filetype plugin indent on
@@ -61,7 +62,7 @@ set nobackup
 set nocompatible
 set nolangremap
 set nrformats-=octal
-set number
+set number relativenumber
 set pastetoggle=<F12>
 set ruler
 set scrolloff=1
