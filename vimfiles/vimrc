@@ -43,6 +43,7 @@ set backupdir=~/.config/vim/
 set belloff=all
 set clipboard=unnamedplus,unnamed
 set cmdheight=2
+set complete+=kspell ":help cpt
 set display=lastline,truncate
 set encoding=utf-8
 set expandtab
