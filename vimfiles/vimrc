@@ -47,7 +47,7 @@ set complete+=kspell ":help cpt
 set display=lastline,truncate
 set encoding=utf-8
 set expandtab
-set foldcolumn=3
+set foldcolumn=2
 set formatoptions=croqlj
 set hidden
 set hlsearch
