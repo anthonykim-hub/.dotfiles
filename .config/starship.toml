@@ -17,3 +17,9 @@ error_symbol = '''[
 
 [username]
 disabled = true
+
+[git_branch]
+symbol = '⸙ '
+
+[git_commit]
+tag_symbol = 'τ '
