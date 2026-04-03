@@ -23,19 +23,6 @@ vimcmd_visual_symbol = "[<](bold yellow)"
 vimcmd_replace_symbol = "[<](bold purple)"
 vimcmd_replace_one_symbol = "[<](bold purple)"
 
-<<<<<<< HEAD
-[username]
-disabled = true
-
-[git_branch]
-symbol = '⸙ '
-
-[git_commit]
-tag_symbol = 'τ '
-||||||| parent of 583267b (incorporate plain text symbols preset)
-[username]
-disabled = true
-=======
 [aws]
 symbol = "aws "
 
@@ -119,11 +106,12 @@ symbol = "gcp "
 
 [git_branch]
 # symbol = "git "
-truncation_symbol = "..."
 symbol = '⸙ '
+truncation_symbol = "..."
 
 [git_commit]
-tag_symbol = " tag "
+# tag_symbol = " tag "
+tag_symbol = "τ "
 
 [git_status]
 ahead = ">"
