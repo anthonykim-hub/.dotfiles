@@ -26,9 +26,10 @@ let mapleader=" "
 set autoindent
 set autoread
 set background=dark
+set writebackup
 set backspace=indent,eol,start
 set backup
-set backupdir=~/.config/vim/
+set backupdir=~/tmp//
 set belloff=all
 set clipboard=unnamedplus,unnamed
 set cmdheight=2
@@ -44,13 +45,11 @@ set history=1000
 set ignorecase
 set incsearch
 set infercase
+set nolangremap
 set laststatus=2
 set list
 set listchars=tab:»·,trail:·
 set mouse=
-set nobackup
-set nocompatible
-set nolangremap
 set nrformats-=octal
 set number relativenumber
 set pastetoggle=<F12>
@@ -74,7 +73,7 @@ set textwidth=80
 set ttimeout
 set ttimeoutlen=100
 set undofile
-set undodir=~/.config/vim/
+set undodir=~/.config/vim//
 set viewoptions-=options
 set viminfo=!,'1000,n~/.config/vim/
 set viminfofile=~/.config/vim/.viminfo
