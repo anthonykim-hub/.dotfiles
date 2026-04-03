@@ -1,4 +1,5 @@
 alias activate='source .venv/bin/activate'
+alias batfish='docker run -d --name batfish -v batfish-data:/data -p 8888:8888 -p 9997:9997 -p 9996:9996 batfish/allinone'
 alias brave='flatpak run com.brave.Browser'
 alias cta='ct --pcre screen -R -D'
 alias cts='ct --pcre screen -R -D'
