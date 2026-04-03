@@ -17,11 +17,9 @@ alias lla='ls -AlgGh'
 alias ls='ls --color=auto -F'
 alias m='less -XRF'
 alias mv='mv -i'
-alias pycharm='flatpak run com.jetbrains.PyCharm-Professional'
 alias rm='rm -i'
 alias scrls='screen -list'
 alias vi='vim -u NONE -U NONE'
-alias vivaldi='flatpak run com.vivaldi.Vivaldi'
 
 # git
 alias ga='git add'
