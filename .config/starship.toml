@@ -342,4 +342,3 @@ symbol = "xmake "
 
 [zig]
 symbol = "zig "
->>>>>>> 583267b (incorporate plain text symbols preset)
