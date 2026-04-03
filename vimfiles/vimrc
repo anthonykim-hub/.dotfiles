@@ -13,6 +13,7 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'axvr/photon.vim'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'farmergreg/vim-lastplace'
 call plug#end()
 
 filetype plugin indent on
