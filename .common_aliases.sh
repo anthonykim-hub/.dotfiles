@@ -19,7 +19,7 @@ alias mv='mv -i'
 alias pycharm='flatpak run com.jetbrains.PyCharm-Professional'
 alias rm='rm -i'
 alias scrls='screen -list'
-alias vi='vim -u NONE'
+alias vi='vim -u NONE -U NONE'
 alias vivaldi='flatpak run com.vivaldi.Vivaldi'
 
 # git
