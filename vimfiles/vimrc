@@ -1,17 +1,5 @@
-"-------------------------------------------
 set nocompatible
 filetype off
-
-if has('win32')
-  set rtp+=$USERPROFILE/.config/vim
-  " i honestly don't know why i need this in windows
-  " but not linux, might be windows terminal?
-  " figure it out later...
-  inoremap æ <C-o>w
-  inoremap â <C-o>b
-  cnoremap æ <S-right>
-  cnoremap â <S-left>
-endif
 
 call plug#begin("~/.config/vim/plugged")
 Plug 'tpope/vim-commentary'
