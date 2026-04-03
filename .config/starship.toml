@@ -5,7 +5,7 @@ continuation_prompt = "[.](bright-black) "
 [hostname]
 ssh_only = false
 disabled = false
-ssh_symbol = "ssh "
+# ssh_symbol = "ssh "
 ###customize hostname at prompt here:
 ###format = "archbtw: "
 
