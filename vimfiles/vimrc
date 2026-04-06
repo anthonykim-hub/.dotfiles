@@ -10,7 +10,6 @@ Plug 'tpope/vim-rsi'
 Plug 'kshenoy/vim-signature'
 Plug 'tpope/vim-surround'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'axvr/photon.vim'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'farmergreg/vim-lastplace'
