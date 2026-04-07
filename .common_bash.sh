@@ -1,3 +1,12 @@
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+LC_COLLATE='C.UTF-8'
+
+shopt -s histappend
+shopt -s checkwinsize
+stty -ixon
+
 alias activate='source .venv/bin/activate'
 alias batfish='docker run -d --name batfish -v batfish-data:/data -p 8888:8888 -p 9997:9997 -p 9996:9996 batfish/allinone'
 alias brave='flatpak run com.brave.Browser'
@@ -36,3 +45,4 @@ alias glog='git log --oneline --decorate --color --graph'
 alias gpr='git pull --rebase'
 alias gp='git push'
 alias gst='git status'
+
