@@ -13,7 +13,7 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'farmergreg/vim-lastplace'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
