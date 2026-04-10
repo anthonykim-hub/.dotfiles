@@ -1,0 +1,39 @@
+# Run ghostty +list-themes to browse available themes.
+adjust-cell-height = 10%
+copy-on-select = clipboard
+config-file = ?auto/theme.ghostty
+cursor-style-blink=true
+cursor-style=block
+font-family = Cascadia Mono
+font-family = Symbols Nerd Font
+font-size = 14
+gtk-tabs-location = bottom
+gtk-titlebar-style = tabs
+gtk-wide-tabs = false
+
+keybind = alt+1=goto_tab:1
+keybind = alt+2=goto_tab:2
+keybind = alt+3=goto_tab:3
+keybind = alt+4=goto_tab:4
+keybind = alt+5=goto_tab:5
+keybind = alt+6=goto_tab:6
+keybind = alt+7=goto_tab:7
+keybind = alt+8=goto_tab:8
+keybind = alt+9=goto_tab:9
+keybind = alt+c=copy_to_clipboard
+keybind = alt+q=close_window
+keybind = alt+t=new_tab
+keybind = alt+w=close_tab
+keybind = alt+page_down=next_tab
+keybind = alt+page_up=previous_tab
+
+keybind = alt+v=paste_from_clipboard
+keybind = shift+insert=paste_from_clipboard
+keybind = shift+ctrl+v=paste_from_clipboard
+
+shell-integration-features = no-cursor
+window-height = 35
+window-padding-x = 20
+window-save-state = always
+window-show-tab-bar = always
+window-width = 135
