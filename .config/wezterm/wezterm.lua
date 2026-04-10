@@ -115,9 +115,9 @@ return {
     { key = 'x', mods = 'LEADER', action = act { CloseCurrentPane = { confirm = true } } },
     { key = '[', mods = 'LEADER', action = act.ActivateCopyMode },
     { key = ']', mods = 'LEADER', action = act.PasteFrom 'Clipboard' },
-    { key = 'v', mods = 'ALT', action = act.PasteFrom 'Clipboard' }, -- this is a NOT a default
-    { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom 'Clipboard' }, -- this is a default
-    { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' }, -- this is also a default
+    { key = 'v', mods = 'ALT', action = act.PasteFrom 'Clipboard' },
+    { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom 'Clipboard' },
+    { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' },
     { key = 'w', mods = 'ALT', action = act { CloseCurrentPane = { confirm = true } } },
     { key = 'q', mods = 'ALT', action = act { CloseCurrentTab = { confirm = true } } },
     { key = 'PageUp', mods = 'ALT', action = act.ActivateTabRelative(-1) },
