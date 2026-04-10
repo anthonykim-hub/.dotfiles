@@ -1,8 +1,8 @@
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
-LC_COLLATE='C.UTF-8'
 
+export LC_COLLATE='C.UTF-8'
 export LESSHISTFILE=-
 
 shopt -s histappend
