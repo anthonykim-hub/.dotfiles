@@ -9,7 +9,7 @@ return {
     { family = 'Symbols Nerd Font Mono' },
   },
   font_size = 14.0,
-  harfbuzz_features = { 'calt=1', 'ss01=1' },
+  harfbuzz_features = {'calt=0', 'clig=0', 'liga=0'},
   hide_tab_bar_if_only_one_tab = false,
   initial_cols = 150,
   initial_rows = 35,
