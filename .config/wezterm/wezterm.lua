@@ -3,7 +3,6 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 return {
   color_scheme = [[Tokyo Night Moon]],
-  -- disable_default_mouse_bindings = true,
   font = wezterm.font_with_fallback {
     { family = 'Cascadia Mono', weight = 'Regular' },
     { family = 'Symbols Nerd Font Mono' },
