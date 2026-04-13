@@ -76,7 +76,7 @@ set ttimeoutlen=100
 set undofile
 set undodir=~/.config/vim//
 set viewoptions-=options
-set viminfo=!,'1000,n~/.config/vim/
+set viminfo=!,'1000,/100,:100,<1000,f1,h,s1000
 set viminfofile=~/.config/vim/.viminfo
 set wildmenu
 
