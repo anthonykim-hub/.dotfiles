@@ -12,6 +12,7 @@ export LESSHISTFILE=-
 
 shopt -s histappend
 shopt -s checkwinsize
+set -o ignoreeof
 stty -ixon
 
 if [ -x /usr/bin/keychain ]; then
