@@ -3,12 +3,6 @@ case $- in
       *) return;;
 esac
 
-if [ -x ~/.local/bin/starship ]; then
-    eval "$(starship init bash)"
-else
-    export PS1='\n\[\033[01;34m\]\w\[\033[00m\]\n\n\$ '
-fi
-
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTCONTROL=ignoredups:erasedups:ignorespace
