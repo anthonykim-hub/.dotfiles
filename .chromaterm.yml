@@ -1,0 +1,44 @@
+palette:
+  status-1: '#ff0000'
+
+rules:
+- description: Generic - Bad
+  regex: (?i)\b(abnormal(ly)?|[Dd]own|los(t|ing)|err(ors?)?|(den(y|ies|ied)?)|reject(ing|ed)?|drop(ped|s)?|(err\-)?disabled?|(timed?\-?out)|fail(s|ed|ure)?|disconnect(ed)?|unreachable|invalid|bad|notconnect|unusable|blk|inaccessible|wrong|collisions?|unsynchronized|mismatch|runts)\b
+  color: f.status-1
+  exclusive: true
+
+- description: Generic - Ambigious bad
+  regex: (?i)\b(no(pe)?|exit(ed)?|reset(t?ing)?|discard(ed|ing)?|block(ed|ing)?|filter(ed|ing)?|stop(p(ed|ing))?|never)\b
+  color: f.status-1
+  exclusive: true
+
+- description: Generic - Not too bad
+  regex: (?i)\b(warnings?|UNKNOWN)\b
+  color: f.status-1
+  exclusive: true
+
+- description: Bad responses
+  regex: \b([Aa]dministratively|[Ss]hutdown|DOWN|not|not active|not activated|BLK|disabled|DENIED|infinity|cannot|violation)\b
+  color: f.status-1
+  exclusive: true
+
+- description: Half-duplex
+  regex: (?i)\bhalf\-?duplex\b
+  color: f.status-1
+  exclusive: true
+
+- description: Spanning tree - Problematic states
+  regex: \b(BKN|(LOOP|ROOT|TYPE|PVID)_Inc)\b
+  color: f.status-1
+  exclusive: true
+
+- description: OSPF - Transitional states
+  regex: \b(ATTEMPT|INIT|EXCHANGE|LOADING)\b
+  color: f.status-1
+  exclusive: true
+
+- description: BGP - Transitional states
+  regex: \b(Idle|Connect|Active|OpenSent|OpenConfirm)\b
+  color: f.status-1
+  exclusive: true
+

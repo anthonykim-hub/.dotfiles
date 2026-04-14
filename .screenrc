@@ -1,0 +1,79 @@
+activity "See window %n"
+autodetach on
+compacthist on
+defflow off
+deflogin off
+defscrollback 300000
+escape ^Bb
+truecolor on
+
+########## new key bindings
+bind \\ split -v
+bind - split
+bind w windowlist -b
+bind P hardcopy
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
+bind t focus top
+bind b focus bottom
+bind Q remove
+bind K kill
+bind o only
+bind , bumpleft
+bind . bumpright
+
+# f12 to enter resize mode https://gist.github.com/joaopizani/2718397
+bindkey "[24~" eval "command -c rsz"
+# use hjkl keys to resize regions
+bind -c rsz h eval "resize -h +1" "command -c rsz"
+bind -c rsz j eval "resize -v +1" "command -c rsz"
+bind -c rsz k eval "resize -v -1" "command -c rsz"
+bind -c rsz l eval "resize -h -1" "command -c rsz"
+# quickly switch between regions without exiting resize mode
+bind -c rsz \t    eval "focus"       "command -c rsz"
+bind -c rsz -k kl eval "focus left"  "command -c rsz"
+bind -c rsz -k kr eval "focus right" "command -c rsz"
+bind -c rsz -k ku eval "focus up"    "command -c rsz"
+bind -c rsz -k kd eval "focus down"  "command -c rsz"
+# reset the region sizes with =
+bind -c rsz =     eval "resize =" "command -c rsz"
+######## end binds
+
+# filename used for reading and writing with the paste buffer
+bufferfile ${HOME}/logs/.screen-exchange
+ignorecase on
+defobuflimit 9128
+# message wait time in seconds
+msgwait 1
+defwrap off
+
+##### Startup
+screen 0
+startup_message off
+vbell off
+
+########### Logging related ####################
+deflog off
+logfile "${HOME}/logs/%t.log"
+logtstamp off
+hardcopydir "${HOME}/logs"
+hardcopy_append on
+################################################
+
+### screen won't autokill windows
+zombie kr
+verbose on
+
+# caption is added when windows are split
+# right align the caption
+caption string '%{= 2}%-=%3n-%t'
+caption always
+
+# makes vert/horiz splits look better
+rendition so "= 2"
+
+hardstatus alwayslastline
+hardstatus string '%{= 7} %-w%{= 1}%{= 0;3}%n-%t%{= 1}%{= 7}%+w %-=[%c]'
+# vim:ft=screen:tw=0
