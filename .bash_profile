@@ -15,8 +15,8 @@ shopt -s histappend
 shopt -s checkwinsize
 stty -ixon
 
-if [ -x /usr/bin/keychain ]; then
-    eval $(/usr/bin/keychain --eval --agents ssh id_ed25519)
+if [ -L ~/.local/bin/keychain ]; then
+    eval $(~/.local/bin/keychain --eval id_ed25519)
 fi
 
 test -f "$HOME/.bashrc" && . "$HOME/.bashrc"
