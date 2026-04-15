@@ -3,10 +3,10 @@ case $- in
       *) return;;
 esac
 
-HISTSIZE=1000
-HISTFILESIZE=2000
-HISTCONTROL=ignoredups:erasedups:ignorespace
-HISTIGNORE="&:cd:gd:cta:alias:myup:gst:history:bg:fg:ls:l:ll:lla:la:exit:vim:nvim:pwd:clear:[ \t]*"
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+export HISTCONTROL=ignoredups:erasedups:ignorespace
+export HISTIGNORE="&:cd:gd:cta:alias:myup:gst:history:bg:fg:ls:l:ll:lla:la:exit:vim:nvim:pwd:clear:[ \t]*"
 export LC_COLLATE='C.UTF-8'
 export LESSHISTFILE=-
 export IGNOREEOF=2
