@@ -10,6 +10,8 @@ export HISTIGNORE="&:cd:gd:cta:alias:myup:gst:history:bg:fg:ls:l:ll:lla:la:exit:
 export LC_COLLATE='C.UTF-8'
 export LESSHISTFILE=-
 export IGNOREEOF=2
+export TMP=~/tmp
+export TEMP=~/tmp
 
 shopt -s histappend
 shopt -s checkwinsize
