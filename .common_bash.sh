@@ -1,6 +1,5 @@
 alias activate='source .venv/bin/activate'
 alias c='cd'
-alias cta='ct --pcre screen -R -D'
 alias g='grep -E -i'
 alias h=history
 alias l='ls -AlgGhd .* 2>/dev/null'
@@ -12,7 +11,6 @@ alias m='less -XRF'
 alias mv='mv -i'
 alias nl='nl -ba'
 alias rm='rm -i'
-alias scrls='screen -list'
 alias vi='vim -u NONE -U NONE'
 
 # git
