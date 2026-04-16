@@ -6,7 +6,7 @@ esac
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 export HISTCONTROL=ignoredups:erasedups:ignorespace
-export HISTIGNORE="&:cd:gd:cta:alias:myup:gst:history:bg:fg:ls:l:ll:lla:la:exit:vim:nvim:pwd:clear:[ \t]*"
+export HISTIGNORE="&:c:cd:gd:cta:alias:myup:gst:history:bg:fg:ls:l:ll:lla:la:exit:vim:nvim:pwd:clear:[ \t]*"
 export LC_COLLATE='C.UTF-8'
 export LESSHISTFILE=-
 export IGNOREEOF=2
