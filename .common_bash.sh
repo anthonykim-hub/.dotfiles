@@ -1,4 +1,5 @@
 alias activate='source .venv/bin/activate'
+alias c='cd'
 alias cta='ct --pcre screen -R -D'
 alias g='grep -E -i'
 alias h=history
