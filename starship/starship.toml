@@ -1,6 +1,7 @@
 # ~/.config/starship.toml
 # "$schema" = 'https://starship.rs/config-schema.json'
 continuation_prompt = "[.](bright-black) "
+command_timeout = 1000
 
 [hostname]
 ssh_only = false
