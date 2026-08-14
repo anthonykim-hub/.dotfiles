@@ -12,7 +12,7 @@ Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -HistorySavePath $Env:USERPROFILE\_PSReadLineHistory
 
 $psreadline = Get-Module PSReadLine
-if (-not (($psreadline.Version.Major -eq 2) -and ($psreadline.Version.Minor -eq 0)))
+if ($psreadline.Version -gt [version]'2.0.0')
 {
     Set-PSReadLineOption -PredictionViewStyle ListView
     Set-PSReadLineOption -Colors @{
