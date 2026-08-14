@@ -142,7 +142,6 @@ Set-Alias grep mygrep -Force -Option Constant,AllScope
 Set-Alias g mygrep
 Set-Alias openssl $Env:LOCALAPPDATA\Programs\Git\usr\bin\openssl.exe
 Set-Alias diff mydiff -Force -Option Constant,AllScope
-Set-Alias code code-insiders
 function d {
     mydiff -u $args
 }
