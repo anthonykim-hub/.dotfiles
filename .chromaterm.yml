@@ -3,7 +3,7 @@ palette:
 
 rules:
 - description: Generic - Bad
-  regex: (?i)\b(abnormal(ly)?|[Dd]own|los(t|ing)|err(ors?)?|(den(y|ies|ied)?)|reject(ing|ed)?|drop(ped|s)?|(err\-)?disabled?|(timed?\-?out)|fail(s|ed|ure)?|disconnect(ed)?|unreachable|invalid|bad|notconnect|unusable|blk|inaccessible|wrong|collisions?|unsynchronized|mismatch|runts)\b
+  regex: (?i)\b(abnormal(ly)?|(admin )?[Dd]own|los(t|ing)|err(ors?)?|(den(y|ies|ied)?)|reject(ing|ed)?|drop(ped|s)?|(err\-)?disabled?|(timed?\-?out)|fail(s|ed|ure)?|disconnect(ed)?|unreachable|invalid|bad|notconnect?|unusable|blk|inaccessible|wrong|collisions?|unsynchronized|mismatch|runts|xcvrAbsen)\b
   color: f.status-1
   exclusive: true
 
