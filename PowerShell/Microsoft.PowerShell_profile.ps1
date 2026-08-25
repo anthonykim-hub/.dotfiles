@@ -130,9 +130,7 @@ function gst
     git status $args
 }
 
-Set-Alias vim $Env:LOCALAPPDATA\Programs\vim\vim92\vim.exe
-Set-Alias gvim $Env:LOCALAPPDATA\Programs\vim\vim92\gvim.exe
-Set-Alias mydiff $Env:LOCALAPPDATA\Programs\vim\vim92\diff.exe
+Set-Alias mydiff $Env:LOCALAPPDATA\Programs\Vim\diff.exe
 Set-Alias activate .\.venv\Scripts\activate.ps1
 Set-Alias less $Env:LOCALAPPDATA\Programs\Git\usr\bin\less.exe
 Set-Alias more less
