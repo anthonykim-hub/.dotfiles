@@ -51,6 +51,7 @@ set listchars=tab:»·,trail:·
 set mouse=
 set nrformats-=octal
 set number relativenumber
+set omnifunc=syntaxcomplete#Complete
 set pastetoggle=<F12>
 set ruler
 set scrolloff=1
