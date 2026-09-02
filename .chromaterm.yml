@@ -18,7 +18,7 @@ rules:
   exclusive: true
 
 - description: Bad responses
-  regex: \b([Aa]dministratively|[Ss]hutdown|DOWN|not|not active|not activated|BLK|disabled|DENIED|infinity|cannot|violation)\b
+  regex: \b([Aa]dministratively|[Ss]hutdown|DOWN|channelDo|not|not active|not activated|BLK|disabled|DENIED|infinity|cannot|violation)\b
   color: f.status-1
   exclusive: true
 
