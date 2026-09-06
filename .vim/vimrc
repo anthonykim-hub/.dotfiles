@@ -96,12 +96,13 @@ inoremap <silent> ;;l     -------------------------------------------<CR>
 " plugin related maps
 
 if exists('$SSH_TTY') || exists("$WSLENV")
-  vnoremap <leader>y      :OSCYankVisual<CR>
-  nnoremap <leader>Y      v$:OSCYankVisual<CR>
-  nnoremap <leader>yy     V:OSCYankVisual<CR>
+  set clipboard=
+  nmap <leader>y          <Plug>OSCYankOperator
+  nmap <leader>Y          <leader>y_
+  vmap <leader>yy         <Plug>OSCYankVisual
 else
   vnoremap <leader>y      "+y
-  nnoremap <leader>Y      "+y
+  nnoremap <leader>Y      "+y_
   nnoremap <leader>yy     "+Y
 endif
 
