@@ -98,12 +98,14 @@ inoremap <silent> ;;l     -------------------------------------------<CR>
 if exists('$SSH_TTY') || exists("$WSLENV")
   set clipboard=
   nmap <leader>y          <Plug>OSCYankOperator
+  nmap <leader>yy         <leader>y_
   nmap <leader>Y          <leader>y_
-  vmap <leader>yy         <Plug>OSCYankVisual
+  vmap <leader>y          <Plug>OSCYankVisual
 else
-  vnoremap <leader>y      "+y
+  nnoremap <leader>y      "+y
+  nnoremap <leader>yy     "+y_
   nnoremap <leader>Y      "+y_
-  nnoremap <leader>yy     "+Y
+  vnoremap <leader>y      "+y
 endif
 
 vnoremap <Enter>          <Plug>(EasyAlign)
