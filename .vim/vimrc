@@ -99,12 +99,10 @@ if exists('$SSH_TTY') || exists("$WSLENV")
   set clipboard=
   nmap <leader>y          <Plug>OSCYankOperator
   nmap <leader>yy         <leader>y_
-  nmap <leader>Y          <leader>y_
   vmap <leader>y          <Plug>OSCYankVisual
 else
   nnoremap <leader>y      "+y
   nnoremap <leader>yy     "+y_
-  nnoremap <leader>Y      "+y_
   vnoremap <leader>y      "+y
 endif
 
