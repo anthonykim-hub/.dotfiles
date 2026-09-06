@@ -95,7 +95,7 @@ inoremap <silent> ;;l     -------------------------------------------<CR>
 
 " plugin related maps
 
-if exists('$SSH_TTY') || system('uname -r') =~ "microsoft"
+if exists('$SSH_TTY') || exists("$WSLENV")
   vnoremap <leader>y      :OSCYankVisual<CR>
   nnoremap <leader>Y      v$:OSCYankVisual<CR>
   nnoremap <leader>yy     V:OSCYankVisual<CR>
