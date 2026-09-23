@@ -20,6 +20,17 @@ if ($psreadline.Version -gt [version]'2.0.0')
         Error                  = "$([char]0x1b)[1;91m"
         ListPredictionSelected = "$([char]0x1b)[48;5;47m"
     }
+    # Set-PSReadLineOption -AddToHistoryHandler {
+    #     param([string]$line)
+    #     return $line.Length -gt 3 -and $line[0] -ne ' ' -and $line[-1] -ne ';'
+    # }
+    Set-PSReadLineOption -AddToHistoryHandler {
+        param($command)
+        if ($command -like ' *') {
+            return $false
+        }
+        return $true
+    }
 }
 
 if ($PSVersionTable.PSVersion.Major -lt 7)
@@ -116,8 +127,26 @@ Set-Alias g mygrep
 Set-Alias openssl $Env:LOCALAPPDATA\Programs\Git\usr\bin\openssl.exe
 Set-Alias diff mydiff -Force -Option Constant,AllScope
 
-function d {
+function d
+{
     mydiff -u $args
+}
+
+function wslshut
+{
+    wsl --shutdown
+}
+
+function getjump
+{
+    scp jump:logs/*.log ~/one/logs
+    scp jump:Projects/PythonScripts/*.xlsx ~/one/logs
+}
+
+function cleanjump
+{
+    ssh jump "rm logs/*.log"
+    ssh jump "rm Projects/PythonScripts/*.xlsx"
 }
 
 function mycurl
@@ -171,7 +200,7 @@ function lla
     Get-ChildItem | Sort-Object Length, Name
 }
 
-function  vi
+function vi
 {
     vim -u NONE -U NONE
 }
@@ -195,31 +224,31 @@ function mkjunction($original, $new)
 function md5sum($fileName)
 {
     $hashResult = Get-FileHash -Path $fileName -Algorithm MD5
-    Write-Host "$($hashResult.Hash.ToLower())  $fileName"
+    Write-Host "$($hashResult.Hash.ToLower()) $fileName"
 }
 
 function sha1sum($filename)
 {
     $hashResult = Get-FileHash -Path $fileName -Algorithm SHA1
-    Write-Host "$($hashResult.Hash.ToLower())  $fileName"
+    Write-Host "$($hashResult.Hash.ToLower()) $fileName"
 }
 
 function sha256sum($filename)
 {
     $hashResult = Get-FileHash -Path $fileName -Algorithm SHA256
-    Write-Host "$($hashResult.Hash.ToLower())  $fileName"
+    Write-Host "$($hashResult.Hash.ToLower()) $fileName"
 }
 
 function sha384sum($filename)
 {
     $hashResult = Get-FileHash -Path $fileName -Algorithm SHA384
-    Write-Host "$($hashResult.Hash.ToLower())  $fileName"
+    Write-Host "$($hashResult.Hash.ToLower()) $fileName"
 }
 
 function sha512sum($filename)
 {
     $hashResult = Get-FileHash -Path $fileName -Algorithm SHA512
-    Write-Host "$($hashResult.Hash.ToLower())  $fileName"
+    Write-Host "$($hashResult.Hash.ToLower()) $fileName"
 }
 
 function myhistory([int]$Count = 100)
@@ -280,7 +309,7 @@ function cdh
 {
     Set-Location $Env:USERPROFILE
 }
-Set-Alias c   cdh
+Set-Alias c cdh
 
 ### these functions were written by AI (ugh)
 function wg
