@@ -10,15 +10,21 @@ return {
   -- { 'romainl/Apprentice' },
   -- { 'navarasu/onedark.nvim' },
 
+  {
+    'clearaspect/onehalf',
+    lazy = false,
+    priority = 1000,
+  },
+
   -- Configure LazyVim to load colorscheme
-  -- {
-  --   'LazyVim/LazyVim',
-  --   opts = {
-  --     colorscheme = 'github_dark_default',
-  --     styles = {
-  --       comments = { italic = false },
-  --       keywords = { italic = false },
-  --     },
-  --   },
-  -- },
+  {
+    'LazyVim/LazyVim',
+    opts = {
+      colorscheme = 'onehalfdark',
+      styles = {
+        comments = { italic = false },
+        keywords = { italic = false },
+      },
+    },
+  },
 }
