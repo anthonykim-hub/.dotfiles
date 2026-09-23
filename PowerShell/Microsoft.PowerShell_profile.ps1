@@ -54,31 +54,6 @@ if ($PSVersionTable.PSVersion.Major -lt 7)
 Import-Module posh-git
 $GitPromptSettings.DefaultPromptPrefix.Text = "`nPS "
 
-Function Set-PathVariable {
-    # https://www.powershellgallery.com/packages/fscps.tools/1.1.314/content/internal/functions/set-pathvariable.ps1
-    param (
-        [string]$AddPath,
-        [string]$RemovePath,
-        [ValidateSet('Process', 'User', 'Machine')]
-        [string]$Scope = 'Process'
-    )
-    $regexPaths = @()
-    if ($PSBoundParameters.Keys -contains 'AddPath') {
-        $regexPaths += [regex]::Escape($AddPath)
-    }
-
-    if ($PSBoundParameters.Keys -contains 'RemovePath') {
-        $regexPaths += [regex]::Escape($RemovePath)
-    }
-
-    $arrPath = [System.Environment]::GetEnvironmentVariable('PATH', $Scope) -split ';'
-    foreach ($path in $regexPaths) {
-        $arrPath = $arrPath | Where-Object { $_ -notMatch "^$path\\?" }
-    }
-    $value = ($arrPath + $addPath) -join ';'
-    [System.Environment]::SetEnvironmentVariable('PATH', $value, $Scope)
-}
-
 function gitpull
 {
     git pull $args
@@ -140,6 +115,7 @@ Set-Alias grep mygrep -Force -Option Constant,AllScope
 Set-Alias g mygrep
 Set-Alias openssl $Env:LOCALAPPDATA\Programs\Git\usr\bin\openssl.exe
 Set-Alias diff mydiff -Force -Option Constant,AllScope
+
 function d {
     mydiff -u $args
 }
