@@ -200,6 +200,11 @@ function lla
     Get-ChildItem | Sort-Object Length, Name
 }
 
+function la
+{
+    Get-ChildItem -Name
+}
+
 function vi
 {
     vim -u NONE -U NONE
