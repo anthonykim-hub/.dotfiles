@@ -1,0 +1,14 @@
+# git
+alias ga='git add'
+alias gaa='git add --all'
+alias gc!='git commit -v --amend'
+alias gcam='git commit -a -m'
+alias gcmsg='git commit -m'
+alias gcp='git commit --patch'
+alias gd='git diff'
+alias gl='git pull'
+alias glog='git log --oneline --decorate --color --graph'
+alias gpr='git pull --rebase'
+alias gp='git push'
+alias gst='git status'
+
