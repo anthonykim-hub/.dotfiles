@@ -11,11 +11,11 @@ Set-PSReadLineOption -BellStyle Visual
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -HistorySavePath $Env:USERPROFILE\_PSReadLineHistory
 Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -Colors @{
-    Emphasis               = "$([char]0x1b)[1;94m"
-    Error                  = "$([char]0x1b)[1;91m"
-    ListPredictionSelected = "$([char]0x1b)[48;5;47m"
-}
+# Set-PSReadLineOption -Colors @{
+#     Emphasis               = "$([char]0x1b)[1;94m"
+#     Error                  = "$([char]0x1b)[1;91m"
+#     ListPredictionSelected = "$([char]0x1b)[48;5;47m"
+# }
 
 # Git stuff
 Import-Module posh-git
