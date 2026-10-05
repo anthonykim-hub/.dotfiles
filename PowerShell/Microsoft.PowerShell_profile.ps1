@@ -10,61 +10,16 @@
 Set-PSReadLineOption -BellStyle Visual
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -HistorySavePath $Env:USERPROFILE\_PSReadLineHistory
-
-$psreadline = Get-Module PSReadLine
-if ($psreadline.Version -gt [version]'2.0.0')
-{
-    Set-PSReadLineOption -PredictionViewStyle ListView
-    Set-PSReadLineOption -Colors @{
-        Emphasis               = "$([char]0x1b)[1;94m"
-        Error                  = "$([char]0x1b)[1;91m"
-        ListPredictionSelected = "$([char]0x1b)[48;5;47m"
-    }
-    # Set-PSReadLineOption -AddToHistoryHandler {
-    #     param([string]$line)
-    #     return $line.Length -gt 3 -and $line[0] -ne ' ' -and $line[-1] -ne ';'
-    # }
-    Set-PSReadLineOption -AddToHistoryHandler {
-        param($command)
-        if ($command -like ' *') {
-            return $false
-        }
-        return $true
-    }
-}
-
-if ($PSVersionTable.PSVersion.Major -lt 7)
-{
-    # https://superuser.com/questions/593987/change-directory-to-previous-directory-in-powershell
-    function custom_cd
-    {
-        if ($args.Count -eq 0)
-        {
-            $tmp_path = $Env:USERPROFILE
-        } elseif ($args[0] -eq '-')
-        {
-            $tmp_path = $OLDPWD;
-        } else
-        {
-            $tmp_path = $args[0];
-        }
-        if ($tmp_path)
-        {
-            Set-Variable -Name OLDPWD -Value $PWD -Scope global;
-            Set-Location $tmp_path;
-        }
-    }
-    Set-Alias cd  custom_cd -Option AllScope
-} else
-{
-    # i.e., pwsh 7.x or greater
-    Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -Colors @{
+    Emphasis               = "$([char]0x1b)[1;94m"
+    Error                  = "$([char]0x1b)[1;91m"
+    ListPredictionSelected = "$([char]0x1b)[48;5;47m"
 }
 
 # Git stuff
 Import-Module posh-git
 $GitPromptSettings.DefaultPromptPrefix.Text = "`nPS "
-
 function gitpull
 {
     git pull $args
