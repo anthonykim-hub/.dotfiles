@@ -82,7 +82,7 @@ let g:highlightedyank_highlight_duration = 200
 let g:highlightedyank_highlight_in_visual = 0
 
 map Q                     gq
-nnoremap <silent> <C-L>   :nohlsearch<CR>
+nnoremap <silent> <C-L>   :nohlsearch<CR><C-L>
 inoremap <C-U>            <C-G>u<C-U>
 nnoremap U                :redo<CR>
 nnoremap Y                y$
