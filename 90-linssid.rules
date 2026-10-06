@@ -1,0 +1,5 @@
+polkit.addRule(function(action, subject) {
+  if (action.id == "com.warsev.pkexec.linssid") {
+	  return polkit.Result.YES;
+  }
+})
