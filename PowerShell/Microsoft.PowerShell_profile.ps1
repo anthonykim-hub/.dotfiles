@@ -66,6 +66,14 @@ function gst
 {
     git status $args
 }
+function gsi
+{
+    git submodule init
+}
+function gsu
+{
+    git submodule update
+}
 
 Set-Alias mydiff $Env:LOCALAPPDATA\Programs\Vim\diff.exe
 Set-Alias activate .\.venv\Scripts\activate.ps1
