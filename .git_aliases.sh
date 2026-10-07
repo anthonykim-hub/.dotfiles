@@ -10,5 +10,7 @@ alias gl='git pull'
 alias glog='git log --oneline --decorate --color --graph'
 alias gpr='git pull --rebase'
 alias gp='git push'
+alias gsi='git submodule init'
+alias gsu='git submodule update'
 alias gst='git status'
 
