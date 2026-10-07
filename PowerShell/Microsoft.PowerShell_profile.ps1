@@ -126,7 +126,12 @@ function Get-Pass
 
 function Get-PubIP
 {
-    (Invoke-WebRequest http://ifconfig.me/ip ).Content
+    (Invoke-WebRequest ipinfo.io/ip).Content
+}
+
+function ipinfo
+{
+    (Invoke-WebRequest ipinfo.io).Content
 }
 
 function Get-UTC
