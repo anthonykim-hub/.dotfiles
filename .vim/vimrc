@@ -2,20 +2,17 @@ set nocompatible
 filetype off
 
 call plug#begin("~/.config/vim/plugged")
-Plug 'tpope/vim-commentary'
-Plug 'junegunn/vim-easy-align'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rsi'
-Plug 'kshenoy/vim-signature'
-Plug 'tpope/vim-surround'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'ojroques/vim-oscyank', {'branch': 'main'}
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 Plug 'farmergreg/vim-lastplace'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'kshenoy/vim-signature'
 Plug 'machakann/vim-highlightedyank'
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 filetype plugin indent on
@@ -107,9 +104,6 @@ else
   nnoremap <leader>Y      "+y$
   vnoremap <leader>y      "+y
 endif
-
-vnoremap <Enter>          <Plug>(EasyAlign)
-noremap ga                <Plug>(EasyAlign)
 
 colorscheme onehalfdark
 highlight clear foldcolumn
