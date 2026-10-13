@@ -87,8 +87,9 @@ nnoremap /                /\v
 nnoremap ?                ?\v
 vnoremap <                <gv
 vnoremap >                >gv
-inoremap <silent> ;;d     ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
-inoremap <silent> ;;l     -------------------------------------------<CR>
+inoremap <silent> d^*     ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
+inoremap <silent> l^*     -------------------------------------------<CR>
+iab u^*                   μs
 
 " plugin related maps
 
