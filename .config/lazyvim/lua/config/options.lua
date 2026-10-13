@@ -13,6 +13,7 @@ end
 if vim.env.TMUX then
   vim.g.clipboard = 'tmux'
 end
+vim.o.numberwidth = 6
 vim.o.timeoutlen = 500
 vim.opt.background = 'dark'
 vim.opt.clipboard = 'unnamedplus,unnamed'
