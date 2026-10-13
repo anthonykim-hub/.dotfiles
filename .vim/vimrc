@@ -89,11 +89,12 @@ vnoremap <                <gv
 vnoremap >                >gv
 inoremap <silent> d^*     ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
 inoremap <silent> l^*     -------------------------------------------<CR>
-iab u^*                   μs
+iab s^*                   μs
+iab m^*                   μm
 
 " plugin related maps
 
-if exists('$SSH_TTY') || exists("$WSLENV")
+if exists('$SSH_TTY')
   set clipboard=
   nmap <leader>y          <Plug>OSCYankOperator
   nmap <leader>yy         <leader>y_
