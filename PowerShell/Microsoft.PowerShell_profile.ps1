@@ -13,6 +13,17 @@ Set-PSReadLineOption -HistorySavePath $Env:USERPROFILE\_PSReadLineHistory
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 
+$BlockFromHist = {
+    param ([string]$line)
+    $skip = "^ |ls|lla|dir|gst|gl|gp|gcam|exit|vim|vi"
+    if ($line -match $skip) {
+        return $false
+    } else {
+        return $true
+    }
+}
+Set-PSReadLineOption -AddToHistoryHandler $BlockFromHist
+
 # Git stuff
 Import-Module posh-git
 $GitPromptSettings.DefaultPromptPrefix.Text = "`nPS "
