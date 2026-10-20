@@ -94,7 +94,7 @@ iab m^*                   μm
 
 " plugin related maps
 
-if exists('$SSH_TTY')
+if exists('$SSH_TTY') || exists("$WSLENV")
   set clipboard=
   nmap <leader>y          <Plug>OSCYankOperator
   nmap <leader>yy         <leader>y_
