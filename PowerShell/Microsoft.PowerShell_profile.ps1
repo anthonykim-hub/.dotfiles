@@ -15,7 +15,7 @@ Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 
 $BlockFromHist = {
     param ([string]$line)
-    $skip = "^ |ls|lla|dir|gst|gl|gp|gcam|exit|vim|vi"
+    $skip = "^ |ls|lla|dir|gst|gl|gp|gcam|exit"
     if ($line -match $skip) {
         return $false
     } else {
