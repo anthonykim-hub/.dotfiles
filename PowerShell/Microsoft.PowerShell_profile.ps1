@@ -9,7 +9,7 @@
 # PSReadLine
 Set-PSReadLineOption -BellStyle Visual
 Set-PSReadLineOption -EditMode Emacs
-Set-PSReadLineOption -HistorySavePath $Env:USERPROFILE\_PSReadLineHistory
+Set-PSReadLineOption -HistorySavePath $Env:TEMP\_PSReadLineHistory
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 
