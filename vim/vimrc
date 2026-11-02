@@ -1,8 +1,18 @@
 set nocompatible
 filetype off
 
-call plug#begin("~/.config/vim/plugged")
+" Install vim-plug if not found
+if empty(glob("$XDG_CONFIG_HOME/vim/autoload/plug.vim"))
+    silent !curl -fLo $XDG_CONFIG_HOME/vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
 
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+call plug#begin()
 Plug 'farmergreg/vim-lastplace'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kshenoy/vim-signature'
@@ -12,16 +22,12 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-surround'
-
 call plug#end()
 
 filetype plugin indent on
 syntax on
-
 packadd! matchit
-
 let mapleader=" "
-
 set autoindent
 set autoread
 set background=dark
@@ -75,9 +81,6 @@ set viewoptions-=options
 set viminfo=!,'1000,/100,:100,<1000,f1,h,s1000
 set wildmenu
 
-let g:highlightedyank_highlight_duration = 200
-let g:highlightedyank_highlight_in_visual = 0
-
 map Q                     gq
 nnoremap <silent> <C-L>   :nohlsearch<CR><C-L>
 inoremap <C-U>            <C-G>u<C-U>
@@ -92,7 +95,10 @@ inoremap <silent> l^*     -------------------------------------------<CR>
 iab s^*                   μs
 iab m^*                   μm
 
-" plugin related maps
+" plugin related
+
+let g:highlightedyank_highlight_duration = 200
+let g:highlightedyank_highlight_in_visual = 0
 
 if exists('$SSH_TTY') || exists("$WSLENV")
   set clipboard=
