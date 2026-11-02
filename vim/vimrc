@@ -13,7 +13,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-call plug#begin()
+call plug#begin("~/.config/vim-local/plugged")
 Plug 'farmergreg/vim-lastplace'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kshenoy/vim-signature'
