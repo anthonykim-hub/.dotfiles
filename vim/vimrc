@@ -24,6 +24,8 @@ Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kshenoy/vim-signature'
 Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = 200
+let g:highlightedyank_highlight_in_visual = 200
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -108,10 +110,6 @@ iab s^*                   μs
 iab m^*                   μm
 
 " plugin related
-
-let g:highlightedyank_highlight_duration = 200
-let g:highlightedyank_highlight_in_visual = 0
-
 if exists('$SSH_TTY') || exists("$WSLENV")
   set clipboard=
   nmap <leader>y          <Plug>OSCYankOperator
