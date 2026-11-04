@@ -47,6 +47,7 @@ set autoread
 set background=dark
 set backspace=indent,eol,start
 set backup
+set backupdir=~/tmp//
 set belloff=all
 set clipboard=unnamedplus,unnamed
 set cmdheight=2
@@ -91,8 +92,10 @@ set textwidth=80
 set ttimeout
 set ttimeoutlen=100
 set undofile
+set undodir=~/tmp//
 set viewoptions-=options
 set viminfo=!,'1000,/100,:100,<1000,f1,h,s1000
+set viminfofile=~/tmp/.viminfo
 set wildmenu
 
 map Q                     gq
