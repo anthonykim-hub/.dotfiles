@@ -23,7 +23,6 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kshenoy/vim-signature'
-Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
@@ -113,16 +112,10 @@ iab m^*                   μm
 
 " plugin related
 if exists('$SSH_TTY') || exists("$WSLENV")
-  " packadd osc52
-  " set clipmethod+=osc52
-  " let g:osc52_disable_paste=1
-  " let g:osc52_force_avail=1
-  set clipboard=
-  nmap <leader>y          <Plug>OSCYankOperator
-  nmap <leader>yy         <leader>y_
-  nmap <leader>Y          <leader>y$
-  vmap <leader>y          <Plug>OSCYankVisual
-else
+  packadd osc52
+  set clipmethod=osc52
+  let g:osc52_disable_paste=1
+  let g:osc52_force_avail=1
   nnoremap <leader>y      "+y
   nnoremap <leader>yy     "+y_
   nnoremap <leader>Y      "+y$
