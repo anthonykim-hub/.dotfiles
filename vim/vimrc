@@ -99,27 +99,28 @@ set wildmenu
 map Q                     gq
 nnoremap <silent> <C-L>   :nohlsearch<CR><C-L>
 inoremap <C-U>            <C-G>u<C-U>
+nnoremap v              "+gP
+inoremap v              <C-o>"+gp
 nnoremap U                :redo<CR>
 nnoremap Y                y$
 nnoremap /                /\v
 nnoremap ?                ?\v
 vnoremap <                <gv
 vnoremap >                >gv
+nnoremap <leader>y        "+y
+nnoremap <leader>yy       "+y_
+nnoremap <leader>Y        "+y$
+vnoremap <leader>y        "+y
 inoremap <silent> d^*     ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
 inoremap <silent> l^*     -------------------------------------------<CR>
 iab s^*                   μs
 iab m^*                   μm
 
-" plugin related
 if exists('$SSH_TTY') || exists("$WSLENV")
   packadd osc52
   set clipmethod=osc52
   let g:osc52_disable_paste=1
   let g:osc52_force_avail=1
-  nnoremap <leader>y      "+y
-  nnoremap <leader>yy     "+y_
-  nnoremap <leader>Y      "+y$
-  vnoremap <leader>y      "+y
 endif
 
 colorscheme dracula
