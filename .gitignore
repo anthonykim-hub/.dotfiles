@@ -1,4 +1,5 @@
 .netrwhist
 *~
+*.swp
 lazy-lock.json
 plug.vim.old
