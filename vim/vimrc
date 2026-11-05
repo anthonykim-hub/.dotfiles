@@ -23,6 +23,7 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kshenoy/vim-signature'
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
@@ -31,12 +32,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
-" Try vim packages
-" Plug 'machakann/vim-highlightedyank'
-" let g:highlightedyank_highlight_duration = 200
-" let g:highlightedyank_highlight_in_visual = 200
-Plug 'ojroques/vim-oscyank', {'branch': 'main'}
-" Plug 'tpope/vim-commentary'
 call plug#end()
 
 filetype plugin indent on
@@ -44,7 +39,6 @@ syntax on
 packadd! matchit
 packadd! editorconfig
 packadd! comment
-" packadd! nohlsearch
 packadd! hlyank
 let mapleader=" "
 set autoindent
