@@ -1,3 +1,5 @@
+" linux vimrc
+if v:version >= 902
 set nocompatible
 filetype off
 
@@ -125,4 +127,5 @@ highlight clear signcolumn
 highlight clear Tablinefill
 highlight clear Folded
 set statusline=%<%f%=\ [%1*%M%*%{','.&fileformat}%R%Y]\ [%6l,%4c%V]\ %3b\ 0x%02Bh\ %P
+endif
 " vim:ft=vim:tw=0:sw=2:ts=2:sts=2:nowrap
