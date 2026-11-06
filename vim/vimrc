@@ -96,7 +96,7 @@ set viminfofile=~/tmp/.viminfo
 set wildmenu
 
 map Q                     gq
-nnoremap <silent> <C-L>   :nohlsearch<CR><C-L>
+nnoremap <silent><C-L>    :nohlsearch<CR><C-L>
 inoremap <C-U>            <C-G>u<C-U>
 nnoremap U                :redo<CR>
 nnoremap Y                y$
@@ -108,8 +108,8 @@ nnoremap <leader>y        "+y
 nnoremap <leader>yy       "+y_
 nnoremap <leader>Y        "+y$
 vnoremap <leader>y        "+y
-inoremap <silent> d^*     ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
-inoremap <silent> l^*     -------------------------------------------<CR>
+inoremap <silent>d^*      ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
+inoremap <silent>l^*      -------------------------------------------<CR>
 " digraph <C-K>m*
 iab s^*                   μs
 iab m^*                   μm
