@@ -1,0 +1,15 @@
+alias activate='source .venv/bin/activate'
+alias c='cd'
+alias g='grep -E -i'
+alias h=history
+alias l='ls -AlgGhd .* 2>/dev/null'
+alias la='ls -a'
+alias ll='ls -lgGh'
+alias lla='ls -AlgGh'
+alias ls='ls --color=auto -F'
+alias m='less -XRF'
+alias mv='mv -i'
+alias nl='nl -ba'
+alias rm='rm -i'
+alias vi='vim -u NONE -U NONE'
+
