@@ -15,7 +15,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-
 call plug#begin("~/.config/vim-local/plugged")
 Plug 'airblade/vim-gitgutter'
 Plug 'farmergreg/vim-lastplace'
@@ -29,7 +28,8 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 " colors
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
 filetype plugin indent on
@@ -114,9 +114,10 @@ if exists("$SSH_TTY") || exists("$WSLENV")
   let g:osc52_force_avail=1
 endif
 
-let g:dracula_bold = 0
-let g:dracula_italic = 0
-colorscheme dracula
+" let g:dracula_bold = 0
+" let g:dracula_italic = 0
+" colorscheme dracula
+colorscheme onehalfdark
 highlight clear foldcolumn
 highlight clear signcolumn
 highlight clear Tablinefill
