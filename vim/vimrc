@@ -18,7 +18,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin("~/.config/vim-local/plugged")
 Plug 'airblade/vim-gitgutter'
-Plug 'dbakker/vim-paragraph-motion'
 Plug 'farmergreg/vim-lastplace'
 Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
