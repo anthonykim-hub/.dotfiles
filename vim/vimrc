@@ -59,6 +59,8 @@ set history=1000
 set ignorecase
 set incsearch
 set infercase
+set iskeyword+=- " make `-` word char
+" set iskeyword-=_ " make `_` not a word char
 set nolangremap
 set laststatus=2
 set list
