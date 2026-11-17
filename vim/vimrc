@@ -93,7 +93,7 @@ set viewoptions-=options
 set viminfo=!,'1000,/100,:100,<1000,f1,h,s1000
 set viminfofile=~/tmp/.viminfo
 
-map Q                     gq
+map Q                     <nop>
 nnoremap <silent><C-L>    :nohlsearch<CR><C-L>
 inoremap <C-U>            <C-G>u<C-U>
 nnoremap U                :redo<CR>
@@ -108,6 +108,12 @@ nnoremap <leader>Y        "+y$
 vnoremap <leader>y        "+y
 inoremap <silent>d^*      ============<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>============<CR>
 inoremap <silent>l^*      -------------------------------------------<CR>
+inoremap <silent>s^*      μs
+inoremap <silent>m^*      μm
+nnoremap <leader>SE       :%s,\s\+$,,g<CR>
+nnoremap <leader>cc       :exe "set cc=" . (&cc == "" ? "80,120" : "")<CR>
+nnoremap <leader>cl       :exe "set cuc! cul!"<CR>
+nnoremap <leader>rn       :exe "set rnu! nu! list!"<CR>
 
 if exists("$SSH_TTY") || exists("$WSLENV")
   packadd osc52
